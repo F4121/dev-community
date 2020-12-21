@@ -1,3 +1,4 @@
 {
-    "mongoURI" : "mongodb+srv://faizi123:faizi123@devcommunity.zjmlc.mongodb.net/dev-community?retryWrites=true&w=majority"
+    "mongoURI" : "mongodb+srv://faizi123:faizi123@devcommunity.zjmlc.mongodb.net/dev-community?retryWrites=true&w=majority",
+    "jwtSecret" : "mysecrettoken"
 }
