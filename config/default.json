@@ -1,4 +1,6 @@
 {
     "mongoURI" : "mongodb+srv://faizi123:faizi123@devcommunity.zjmlc.mongodb.net/dev-community?retryWrites=true&w=majority",
-    "jwtSecret" : "mysecrettoken"
+    "jwtSecret" : "mysecrettoken",
+    "githubClientId": "49ae5231353fe857077b",
+    "githubSecret": "aa607e67f1ae1eb88de7d41fe385db3dd886b9c2"
 }
