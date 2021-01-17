@@ -7,8 +7,7 @@ const { check, validationResult } = require('express-validator');
 
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
-const { Mongoose } = require('mongoose');
-const { response } = require('express');
+const Post = require('../../models/Post');
 
 // @router  GET api/profile/me
 // @desc    Get  current users profile
@@ -145,6 +144,7 @@ router.get('/user/:user_id', async (req, res) => {
 // @access  Private
 router.delete('/', auth, async (req, res) => {
   try {
+    await Post.deleteMany({ user: req.user.id });
     await Profile.findOneAndRemove({ user: req.user.id });
     await User.findOneAndRemove({ _id: req.user.id });
     res.json({ msg: 'User deleted' });
